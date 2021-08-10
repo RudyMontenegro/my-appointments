@@ -22,10 +22,10 @@ class CreateUsersTable extends Migration
 
             $table->string('dni');
 
-            $table->string('address');->nullable();                     
-            $table->string('phone');->nullable();
+            $table->string('address')->nullable();                     
+            $table->string('phone')->nullable();
 
-            $tagble->string('role');// 'admin',. 'patient',.'doctor'
+            $table->string('role');// 'admin',. 'patient',.'doctor'
 
             $table->rememberToken();
             $table->timestamps();

@@ -5,10 +5,10 @@
     <div class="card-header border-0">
         <div class="row align-items-center">
             <div class="col">
-                <h3 class="mb-0">Nuevo Médico</h3>
+                <h3 class="mb-0">Nuevo Paciente</h3>
             </div>
             <div class="col text-right">
-                <a href="{{ url('doctors') }}" class="btn btn-sm btn-danger">Canselar y volver</a>
+                <a href="{{ url('patients') }}" class="btn btn-sm btn-danger">Canselar y volver</a>
             </div>
         </div>
     </div>
@@ -22,27 +22,27 @@
             </ul>
         </div>
         @endif
-        <form action="{{ url('doctors') }}" method="post">
+        <form action="{{ url('patients') }}" method="post">
             @csrf
             <div class="form-group">
-                <label for="name">Nombre del medico</label>
+                <label for="name">Nombre del paciente</label>
                 <input type="text" name="name" class="form-control" value="{{ old('name')}}" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="text" name="email" class="form-control" value="{{ old('email')}}" required>
+                <input type="text" name="email" class="form-control" value="{{ old('description')}}" required>
             </div>
             <div class="form-group">
                 <label for="dni">DNI</label>
-                <input type="text" name="dni" class="form-control" value="{{ old('dni')}}" required>
+                <input type="text" name="dni" class="form-control" value="{{ old('description')}}" required>
             </div>
             <div class="form-group">
                 <label for="address">Dirección</label>
-                <input type="text" name="address" class="form-control" value="{{ old('address')}}" required>
+                <input type="text" name="address" class="form-control" value="{{ old('description')}}" required>
             </div>
             <div class="form-group">
                 <label for="phone">Teléfono</label>
-                <input type="text" name="phone" class="form-control" value="{{ old('phone')}}" required>
+                <input type="text" name="phone" class="form-control" value="{{ old('description')}}" required>
             </div>
             <div class="form-group">
                 <label for="password">Contraseña</label>
